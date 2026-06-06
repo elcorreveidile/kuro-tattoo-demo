@@ -3,13 +3,14 @@ import Link from 'next/link'
 /* ─── DATA ─────────────────────────────────────────────────── */
 
 const GALLERY = [
-  { id: 1, src: 'https://images.unsplash.com/photo-1565058379802-bbe93b2f703a?w=800&h=800&fit=crop&q=80', alt: 'Trabajo blackwork' },
-  { id: 2, src: 'https://images.unsplash.com/photo-1562873547-c48be3d12a11?w=800&h=800&fit=crop&q=80', alt: 'Tatuaje realismo' },
-  { id: 3, src: 'https://images.unsplash.com/photo-1611501275019-9b5cef447267?w=800&h=800&fit=crop&q=80', alt: 'Diseño geométrico' },
-  { id: 4, src: 'https://images.unsplash.com/photo-1598371839696-5c5bb00bdc28?w=800&h=800&fit=crop&q=80', alt: 'Estilo japonés' },
-  { id: 5, src: 'https://images.unsplash.com/photo-1590246815607-28619c7ef5a6?w=800&h=800&fit=crop&q=80', alt: 'Manga tattoo' },
-  { id: 6, src: 'https://images.unsplash.com/photo-1561731216-c3a4d99437d5?w=800&h=800&fit=crop&q=80', alt: 'Sesión en estudio' },
+  { id: 1, src: '<https://picsum.photos/seed/kuro1/800/800', alt: 'Trabajo blackwork>' },
+  { id: 2, src: '<https://picsum.photos/seed/kuro2/800/800', alt: 'Tatuaje realismo>' },
+  { id: 3, src: '<https://picsum.photos/seed/kuro3/800/800', alt: 'Diseño geométrico>' },
+  { id: 4, src: '<https://picsum.photos/seed/kuro4/800/800', alt: 'Estilo japonés>' },
+  { id: 5, src: '<https://picsum.photos/seed/kuro5/800/800', alt: 'Manga tattoo>' },
+  { id: 6, src: '<https://picsum.photos/seed/kuro6/800/800', alt: 'Sesión en estudio>' },
 ]
+
 
 const ARTISTS = [
   {
