@@ -281,7 +281,7 @@ function Process() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           {STEPS.map((step) => (
             <div key={step.num} className="relative">
-              <div className="text-[6rem] font-black text-[#111] leading-none mb-4 select-none">{step.num}</div>
+              <div className="text-[6rem] font-black text-[#DC2626]/20 leading-none mb-4 select-none">{step.num}</div>
               <h3 className="text-xl font-black uppercase tracking-tight mb-3">{step.title}</h3>
               <p className="text-[#666] text-sm leading-relaxed">{step.desc}</p>
             </div>
