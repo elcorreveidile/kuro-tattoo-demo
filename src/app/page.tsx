@@ -199,6 +199,13 @@ function Gallery() {
 }
 
 function Artists() {
+  // Map artist names to slugs
+  const artistSlugs: Record<string, string> = {
+    'Akira Vega': 'akira-vega',
+    'Marta Solano': 'marta-solano',
+    'Ren Nakamura': 'ren-nakamura',
+  }
+
   return (
     <section id="artistas" className="py-24 border-t border-[#111]">
       <div className="max-w-6xl mx-auto px-6">
@@ -210,20 +217,39 @@ function Artists() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-[#111]">
-          {ARTISTS.map((artist) => (
-            <div key={artist.name} className="bg-[#080808] p-8 group">
-              <div className="w-24 h-24 rounded-full overflow-hidden mb-6 border-2 border-[#1a1a1a] group-hover:border-[#DC2626] transition-colors">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src={artist.img} alt={artist.name} className="w-full h-full object-cover grayscale" />
-              </div>
-              <h3 className="text-xl font-black uppercase tracking-tight mb-1">{artist.name}</h3>
-              <p className="text-[#DC2626] text-xs uppercase tracking-widest mb-4">{artist.specialty}</p>
-              <p className="text-[#666] text-sm leading-relaxed mb-6">{artist.bio}</p>
-              <a href="#" className="text-xs text-[#555] hover:text-[#DC2626] transition-colors uppercase tracking-wider">
-                {artist.ig}
-              </a>
-            </div>
-          ))}
+          {ARTISTS.map((artist) => {
+            const slug = artistSlugs[artist.name]
+            return (
+              <Link
+                key={artist.name}
+                href={`/artistas/${slug}`}
+                className="bg-[#080808] p-8 group hover:bg-[#0f0f0f] transition-colors block"
+              >
+                <div className="w-24 h-24 rounded-full overflow-hidden mb-6 border-2 border-[#1a1a1a] group-hover:border-[#DC2626] transition-colors">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img src={artist.img} alt={artist.name} className="w-full h-full object-cover grayscale" />
+                </div>
+                <h3 className="text-xl font-black uppercase tracking-tight mb-1 group-hover:text-[#DC2626] transition-colors">
+                  {artist.name}
+                </h3>
+                <p className="text-[#DC2626] text-xs uppercase tracking-widest mb-4">{artist.specialty}</p>
+                <p className="text-[#666] text-sm leading-relaxed mb-6">{artist.bio}</p>
+                <div className="flex items-center gap-2 text-xs text-[#555] group-hover:text-[#DC2626] transition-colors">
+                  <span>{artist.ig}</span>
+                  <span className="ml-auto">Ver más →</span>
+                </div>
+              </Link>
+            )
+          })}
+        </div>
+
+        <div className="mt-12 text-center">
+          <Link
+            href="/artistas"
+            className="text-xs text-[#555] hover:text-[#DC2626] uppercase tracking-wider transition-colors"
+          >
+            Ver todos los artistas →
+          </Link>
         </div>
       </div>
     </section>
