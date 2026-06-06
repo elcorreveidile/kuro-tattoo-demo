@@ -3,12 +3,12 @@ import Link from 'next/link'
 /* ─── DATA ─────────────────────────────────────────────────── */
 
 const GALLERY = [
-  { id: 1, src: 'https://loremflickr.com/800/800/tattoo,blackwork?lock=1', alt: 'Trabajo blackwork' },
-  { id: 2, src: 'https://loremflickr.com/800/800/tattoo,realism?lock=2', alt: 'Tatuaje realismo' },
-  { id: 3, src: 'https://loremflickr.com/800/800/tattoo,geometric?lock=3', alt: 'Diseño geométrico' },
-  { id: 4, src: 'https://loremflickr.com/800/800/tattoo,japanese?lock=4', alt: 'Estilo japonés' },
-  { id: 5, src: 'https://loremflickr.com/800/800/tattoo,ink?lock=5', alt: 'Manga tattoo' },
-  { id: 6, src: 'https://loremflickr.com/800/800/tattoo,studio?lock=6', alt: 'Sesión en estudio' },
+  { id: 1, src: 'https://loremflickr.com/800/800/tattoo?lock=1', alt: 'Trabajo blackwork' },
+  { id: 2, src: 'https://loremflickr.com/800/800/tattoo?lock=2', alt: 'Tatuaje realismo' },
+  { id: 3, src: 'https://loremflickr.com/800/800/tattoo?lock=3', alt: 'Diseño geométrico' },
+  { id: 4, src: 'https://loremflickr.com/800/800/tattoo?lock=4', alt: 'Estilo japonés' },
+  { id: 5, src: 'https://loremflickr.com/800/800/tattoo?lock=5', alt: 'Manga tattoo' },
+  { id: 6, src: 'https://loremflickr.com/800/800/tattoo?lock=6', alt: 'Sesión en estudio' },
 ]
 
 const ARTISTS = [
@@ -90,13 +90,18 @@ function Nav() {
           KURO <span className="text-[#DC2626]">·</span> STUDIO
         </a>
         <nav className="hidden md:flex items-center gap-8">
-          {['Galería', 'Artistas', 'Estilos', 'Contacto'].map((item) => (
+          {[
+            { label: 'Galería', href: 'galeria' },
+            { label: 'Artistas', href: 'artistas' },
+            { label: 'Estilos', href: 'estilos' },
+            { label: 'Contacto', href: 'contacto' },
+          ].map((item) => (
             <a
-              key={item}
-              href={`#${item.toLowerCase()}`}
+              key={item.href}
+              href={`#${item.href}`}
               className="text-xs uppercase tracking-[0.15em] text-[#888] hover:text-[#DC2626] transition-colors"
             >
-              {item}
+              {item.label}
             </a>
           ))}
         </nav>
