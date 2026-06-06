@@ -9,8 +9,9 @@ export async function generateStaticParams() {
   }))
 }
 
-export default function ArtistPage({ params }: { params: { slug: string } }) {
-  const artist = getArtistBySlug(params.slug)
+export default async function ArtistPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params
+  const artist = getArtistBySlug(slug)
 
   if (!artist) {
     notFound()
