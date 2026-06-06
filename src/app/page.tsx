@@ -121,10 +121,10 @@ function Hero() {
       <img
         src="https://images.pexels.com/photos/7005797/pexels-photo-7005797.jpeg?auto=compress&cs=tinysrgb&w=1920"
         alt=""
-        className="absolute inset-0 w-full h-full object-cover opacity-20 grayscale"
+        className="absolute inset-0 w-full h-full object-cover opacity-40 grayscale"
       />
       {/* Gradient overlays */}
-      <div className="absolute inset-0 bg-gradient-to-b from-[#080808]/70 via-[#080808]/50 to-[#080808]/90" />
+      <div className="absolute inset-0 bg-gradient-to-b from-[#080808]/50 via-[#080808]/30 to-[#080808]/80" />
       <div className="absolute inset-0" style={{ background: 'radial-gradient(ellipse 80% 60% at 50% 40%, rgba(220,38,38,0.08) 0%, transparent 70%)' }} />
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#DC2626]/30 to-transparent" />
       <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#DC2626]/10 to-transparent" />
