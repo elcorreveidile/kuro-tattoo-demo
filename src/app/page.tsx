@@ -3,12 +3,12 @@ import Link from 'next/link'
 /* ─── DATA ─────────────────────────────────────────────────── */
 
 const GALLERY = [
-  { id: 1, src: 'https://loremflickr.com/800/800/tattoo?lock=1', alt: 'Trabajo blackwork' },
-  { id: 2, src: 'https://loremflickr.com/800/800/tattoo?lock=2', alt: 'Tatuaje realismo' },
-  { id: 3, src: 'https://loremflickr.com/800/800/tattoo?lock=3', alt: 'Diseño geométrico' },
-  { id: 4, src: 'https://loremflickr.com/800/800/tattoo?lock=4', alt: 'Estilo japonés' },
-  { id: 5, src: 'https://loremflickr.com/800/800/tattoo?lock=5', alt: 'Manga tattoo' },
-  { id: 6, src: 'https://loremflickr.com/800/800/tattoo?lock=6', alt: 'Sesión en estudio' },
+  { id: 1, src: 'https://loremflickr.com/800/800/tattooing?lock=1', alt: 'Trabajo blackwork' },
+  { id: 2, src: 'https://loremflickr.com/800/800/tattooing?lock=3', alt: 'Tatuaje realismo' },
+  { id: 3, src: 'https://loremflickr.com/800/800/tattooing?lock=5', alt: 'Diseño geométrico' },
+  { id: 4, src: 'https://loremflickr.com/800/800/tattooing?lock=7', alt: 'Estilo japonés' },
+  { id: 5, src: 'https://loremflickr.com/800/800/tattooing?lock=9', alt: 'Manga tattoo' },
+  { id: 6, src: 'https://loremflickr.com/800/800/tattooing?lock=11', alt: 'Sesión en estudio' },
 ]
 
 const ARTISTS = [
@@ -116,16 +116,11 @@ function Nav() {
 function Hero() {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background image */}
-      <div className="absolute inset-0">
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
-          src="https://loremflickr.com/1800/900/tattoo,studio,dark?lock=20"
-          alt=""
-          className="w-full h-full object-cover opacity-25"
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#080808]/60 via-transparent to-[#080808]" />
-      </div>
+      {/* CSS background */}
+      <div className="absolute inset-0 bg-[#080808]" />
+      <div className="absolute inset-0" style={{ background: 'radial-gradient(ellipse 80% 60% at 50% 40%, rgba(220,38,38,0.08) 0%, transparent 70%)' }} />
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#DC2626]/30 to-transparent" />
+      <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#DC2626]/10 to-transparent" />
 
       <div className="relative z-10 max-w-6xl mx-auto px-6 text-center">
         <p className="label-tag mb-6 block">Estudio de tatuaje · Barcelona</p>
