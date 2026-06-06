@@ -116,21 +116,31 @@ function Nav() {
 function Hero() {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background image */}
-      {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img
-        src="https://loremflickr.com/1920/1080/tattoo,studio,parlor?lock=99"
-        alt=""
-        className="absolute inset-0 w-full h-full object-cover opacity-15 grayscale"
-      />
+      {/* Background heart SVG */}
+      <div className="absolute inset-0 flex items-center justify-center opacity-[0.06]">
+        <svg viewBox="0 0 512 512" className="w-[800px] h-[800px] text-[#DC2626]" fill="none" stroke="currentColor" strokeWidth="3">
+          <path d="M256 448l-30-30C110 310 48 256 48 192 48 128 100 80 160 80c36 0 68 16 96 48 28-32 60-48 96-48 60 0 112 48 112 112 0 64-62 118-178 226l-30 30z" fill="currentColor" />
+          <path d="M256 448l-30-30C110 310 48 256 48 192 48 128 100 80 160 80c36 0 68 16 96 48 28-32 60-48 96-48 60 0 112 48 112 112 0 64-62 118-178 226l-30 30z" strokeWidth="2" fill="none" />
+          {/* Tattoo-style decorative lines */}
+          <path d="M256 400C180 330 120 280 100 220" strokeWidth="1.5" strokeDasharray="8 4" opacity="0.5" />
+          <path d="M256 400C332 330 392 280 412 220" strokeWidth="1.5" strokeDasharray="8 4" opacity="0.5" />
+          <path d="M160 120c20-10 50-10 96 30" strokeWidth="1" opacity="0.4" />
+          <path d="M352 120c-20-10-50-10-96 30" strokeWidth="1" opacity="0.4" />
+          {/* Inner heart detail */}
+          <path d="M256 380l-22-22C140 270 90 226 90 192c0-30 24-54 54-54 18 0 36 8 52 28l60 70 60-70c16-20 34-28 52-28 30 0 54 24 54 54 0 34-50 78-144 166l-22 22z" strokeWidth="1" opacity="0.3" />
+          {/* Ornamental flourishes */}
+          <path d="M48 192c-10 30 0 60 20 90" strokeWidth="1.5" opacity="0.3" />
+          <path d="M464 192c10 30 0 60-20 90" strokeWidth="1.5" opacity="0.3" />
+          <circle cx="160" cy="80" r="4" fill="currentColor" opacity="0.3" />
+          <circle cx="352" cy="80" r="4" fill="currentColor" opacity="0.3" />
+          <circle cx="256" cy="448" r="4" fill="currentColor" opacity="0.3" />
+        </svg>
+      </div>
       {/* Gradient overlays */}
-      <div className="absolute inset-0 bg-gradient-to-b from-[#080808] via-[#080808]/70 to-[#080808]" />
+      <div className="absolute inset-0 bg-gradient-to-b from-[#080808]/80 via-transparent to-[#080808]/90" />
       <div className="absolute inset-0" style={{ background: 'radial-gradient(ellipse 80% 60% at 50% 40%, rgba(220,38,38,0.08) 0%, transparent 70%)' }} />
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#DC2626]/30 to-transparent" />
       <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#DC2626]/10 to-transparent" />
-      {/* Watermark */}
-      <div className="watermark" />
-
       <div className="relative z-10 max-w-6xl mx-auto px-6 text-center">
         <p className="label-tag mb-6 block">Estudio de tatuaje · Barcelona</p>
         <h1 className="text-6xl sm:text-8xl md:text-[10rem] font-black uppercase tracking-tighter leading-none mb-8">
@@ -487,6 +497,7 @@ function Footer() {
 export default function Home() {
   return (
     <main className="bg-[#080808] text-[#f0f0f0]">
+      <div className="watermark" />
       <Nav />
       <Hero />
       <Gallery />
