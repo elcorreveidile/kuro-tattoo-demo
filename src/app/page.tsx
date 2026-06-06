@@ -3,12 +3,12 @@ import Link from 'next/link'
 /* ─── DATA ─────────────────────────────────────────────────── */
 
 const GALLERY = [
-  { id: 1, src: 'https://picsum.photos/seed/kuro1/800/800', alt: 'Trabajo blackwork' },
-  { id: 2, src: 'https://picsum.photos/seed/kuro2/800/800', alt: 'Tatuaje realismo' },
-  { id: 3, src: 'https://picsum.photos/seed/kuro3/800/800', alt: 'Diseño geométrico' },
-  { id: 4, src: 'https://picsum.photos/seed/kuro4/800/800', alt: 'Estilo japonés' },
-  { id: 5, src: 'https://picsum.photos/seed/kuro5/800/800', alt: 'Manga tattoo' },
-  { id: 6, src: 'https://picsum.photos/seed/kuro6/800/800', alt: 'Sesión en estudio' },
+  { id: 1, src: 'https://loremflickr.com/800/800/tattoo,blackwork?lock=1', alt: 'Trabajo blackwork' },
+  { id: 2, src: 'https://loremflickr.com/800/800/tattoo,realism?lock=2', alt: 'Tatuaje realismo' },
+  { id: 3, src: 'https://loremflickr.com/800/800/tattoo,geometric?lock=3', alt: 'Diseño geométrico' },
+  { id: 4, src: 'https://loremflickr.com/800/800/tattoo,japanese?lock=4', alt: 'Estilo japonés' },
+  { id: 5, src: 'https://loremflickr.com/800/800/tattoo,ink?lock=5', alt: 'Manga tattoo' },
+  { id: 6, src: 'https://loremflickr.com/800/800/tattoo,studio?lock=6', alt: 'Sesión en estudio' },
 ]
 
 const ARTISTS = [
@@ -16,21 +16,21 @@ const ARTISTS = [
     name: 'Akira Vega',
     specialty: 'Blackwork · Geométrico',
     bio: '12 años de experiencia. Especialista en diseños geométricos y patrones complejos inspirados en el arte ancestral.',
-    img: 'https://picsum.photos/seed/artist1/400/400',
+    img: 'https://loremflickr.com/400/400/tattoo,artist,woman?lock=10',
     ig: '@akiravega_ink',
   },
   {
     name: 'Marta Solano',
     specialty: 'Realismo · Retrato',
     bio: 'Premiada en International Tattoo Expo 2023. Sus retratos en blanco y negro son inconfundibles.',
-    img: 'https://picsum.photos/seed/artist2/400/400',
+    img: 'https://loremflickr.com/400/400/tattoo,artist,woman?lock=11',
     ig: '@msolano_tattoo',
   },
   {
     name: 'Ren Nakamura',
     specialty: 'Japonés · Neo-tradicional',
     bio: 'Formado en Osaka durante 5 años. Koi, dragones y flores de cerezo ejecutados con precisión milimétrica.',
-    img: 'https://picsum.photos/seed/artist3/400/400',
+    img: 'https://loremflickr.com/400/400/tattoo,artist,man?lock=12',
     ig: '@ren.kuro',
   },
 ]
@@ -40,21 +40,25 @@ const STYLES = [
     name: 'Blackwork',
     desc: 'Tinta negra sólida. Diseños audaces, geométricos o abstractos con un impacto visual máximo.',
     icon: '◼',
+    img: 'https://loremflickr.com/600/400/tattoo,blackwork,black?lock=30',
   },
   {
     name: 'Realismo',
     desc: 'Retratos, animales y paisajes con un nivel de detalle fotográfico. En color o en blanco y negro.',
     icon: '◎',
+    img: 'https://loremflickr.com/600/400/tattoo,realism,portrait?lock=31',
   },
   {
     name: 'Japonés',
     desc: 'La tradición del Irezumi. Koi, dragones, grullas y olas en la iconografía clásica japonesa.',
     icon: '波',
+    img: 'https://loremflickr.com/600/400/tattoo,japanese,dragon?lock=32',
   },
   {
     name: 'Geométrico',
     desc: 'Líneas precisas, patrones matemáticos y figuras sagradas que crean composiciones únicas.',
     icon: '△',
+    img: 'https://loremflickr.com/600/400/tattoo,geometric,mandala?lock=33',
   },
 ]
 
@@ -111,7 +115,7 @@ function Hero() {
       <div className="absolute inset-0">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          src="https://picsum.photos/seed/kurohero/1800/900"
+          src="https://loremflickr.com/1800/900/tattoo,studio,dark?lock=20"
           alt=""
           className="w-full h-full object-cover opacity-25"
         />
@@ -239,12 +243,22 @@ function Styles() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-px bg-[#111]">
           {STYLES.map((style) => (
-            <div key={style.name} className="bg-[#080808] p-10 group hover:bg-[#0f0f0f] transition-colors">
-              <div className="text-4xl mb-6 text-[#222] group-hover:text-[#DC2626] transition-colors font-black">
-                {style.icon}
+            <div key={style.name} className="bg-[#080808] group hover:bg-[#0f0f0f] transition-colors overflow-hidden">
+              <div className="aspect-video overflow-hidden">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={style.img}
+                  alt={style.name}
+                  className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-500"
+                />
               </div>
-              <h3 className="text-2xl font-black uppercase tracking-tight mb-3">{style.name}</h3>
-              <p className="text-[#666] text-sm leading-relaxed">{style.desc}</p>
+              <div className="p-8">
+                <div className="text-2xl mb-3 text-[#333] group-hover:text-[#DC2626] transition-colors font-black">
+                  {style.icon}
+                </div>
+                <h3 className="text-2xl font-black uppercase tracking-tight mb-3">{style.name}</h3>
+                <p className="text-[#666] text-sm leading-relaxed">{style.desc}</p>
+              </div>
             </div>
           ))}
         </div>
