@@ -3,12 +3,12 @@ import Link from 'next/link'
 /* ─── DATA ─────────────────────────────────────────────────── */
 
 const GALLERY = [
-  { id: 1, src: 'https://loremflickr.com/800/800/tattooing?lock=1', alt: 'Trabajo blackwork' },
+  { id: 1, src: 'https://loremflickr.com/800/800/tattoo?lock=1', alt: 'Trabajo blackwork' },
   { id: 2, src: 'https://loremflickr.com/800/800/tattooing?lock=3', alt: 'Tatuaje realismo' },
   { id: 3, src: 'https://loremflickr.com/800/800/tattooing?lock=5', alt: 'Diseño geométrico' },
-  { id: 4, src: 'https://loremflickr.com/800/800/tattooing?lock=7', alt: 'Estilo japonés' },
-  { id: 5, src: 'https://loremflickr.com/800/800/tattooing?lock=9', alt: 'Manga tattoo' },
-  { id: 6, src: 'https://loremflickr.com/800/800/tattooing?lock=11', alt: 'Sesión en estudio' },
+  { id: 4, src: 'https://loremflickr.com/800/800/tattoo?lock=18', alt: 'Estilo japonés' },
+  { id: 5, src: 'https://loremflickr.com/800/800/tattoo?lock=25', alt: 'Manga tattoo' },
+  { id: 6, src: 'https://loremflickr.com/800/800/tattoo?lock=40', alt: 'Sesión en estudio' },
 ]
 
 const ARTISTS = [
