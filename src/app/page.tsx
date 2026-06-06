@@ -3,35 +3,34 @@ import Link from 'next/link'
 /* ─── DATA ─────────────────────────────────────────────────── */
 
 const GALLERY = [
-  { id: 1, src: '<https://picsum.photos/seed/kuro1/800/800', alt: 'Trabajo blackwork>' },
-  { id: 2, src: '<https://picsum.photos/seed/kuro2/800/800', alt: 'Tatuaje realismo>' },
-  { id: 3, src: '<https://picsum.photos/seed/kuro3/800/800', alt: 'Diseño geométrico>' },
-  { id: 4, src: '<https://picsum.photos/seed/kuro4/800/800', alt: 'Estilo japonés>' },
-  { id: 5, src: '<https://picsum.photos/seed/kuro5/800/800', alt: 'Manga tattoo>' },
-  { id: 6, src: '<https://picsum.photos/seed/kuro6/800/800', alt: 'Sesión en estudio>' },
+  { id: 1, src: 'https://picsum.photos/seed/kuro1/800/800', alt: 'Trabajo blackwork' },
+  { id: 2, src: 'https://picsum.photos/seed/kuro2/800/800', alt: 'Tatuaje realismo' },
+  { id: 3, src: 'https://picsum.photos/seed/kuro3/800/800', alt: 'Diseño geométrico' },
+  { id: 4, src: 'https://picsum.photos/seed/kuro4/800/800', alt: 'Estilo japonés' },
+  { id: 5, src: 'https://picsum.photos/seed/kuro5/800/800', alt: 'Manga tattoo' },
+  { id: 6, src: 'https://picsum.photos/seed/kuro6/800/800', alt: 'Sesión en estudio' },
 ]
-
 
 const ARTISTS = [
   {
     name: 'Akira Vega',
     specialty: 'Blackwork · Geométrico',
     bio: '12 años de experiencia. Especialista en diseños geométricos y patrones complejos inspirados en el arte ancestral.',
-    img: 'https://images.unsplash.com/photo-1529665253569-6d01c0eaf7b6?w=400&h=400&fit=crop&q=80',
+    img: 'https://picsum.photos/seed/artist1/400/400',
     ig: '@akiravega_ink',
   },
   {
     name: 'Marta Solano',
     specialty: 'Realismo · Retrato',
     bio: 'Premiada en International Tattoo Expo 2023. Sus retratos en blanco y negro son inconfundibles.',
-    img: 'https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=400&h=400&fit=crop&q=80',
+    img: 'https://picsum.photos/seed/artist2/400/400',
     ig: '@msolano_tattoo',
   },
   {
     name: 'Ren Nakamura',
     specialty: 'Japonés · Neo-tradicional',
     bio: 'Formado en Osaka durante 5 años. Koi, dragones y flores de cerezo ejecutados con precisión milimétrica.',
-    img: 'https://images.unsplash.com/photo-1547425260-76bcadfb4f2c?w=400&h=400&fit=crop&q=80',
+    img: 'https://picsum.photos/seed/artist3/400/400',
     ig: '@ren.kuro',
   },
 ]
@@ -112,7 +111,7 @@ function Hero() {
       <div className="absolute inset-0">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          src="https://images.unsplash.com/photo-1542856204-00101eb6def4?w=1800&q=70&fit=crop"
+          src="https://picsum.photos/seed/kurohero/1800/900"
           alt=""
           className="w-full h-full object-cover opacity-25"
         />
