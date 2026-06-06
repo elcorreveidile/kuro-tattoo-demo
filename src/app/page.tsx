@@ -8,7 +8,7 @@ const GALLERY = [
   { id: 3, src: 'https://loremflickr.com/800/800/tattooing?lock=5', alt: 'Diseño geométrico' },
   { id: 4, src: 'https://loremflickr.com/800/800/tattoo?lock=18', alt: 'Estilo japonés' },
   { id: 5, src: 'https://loremflickr.com/800/800/tattoo?lock=25', alt: 'Manga tattoo' },
-  { id: 6, src: 'https://loremflickr.com/800/800/tattoo?lock=40', alt: 'Sesión en estudio' },
+  { id: 6, src: 'https://loremflickr.com/800/800/tattoo?lock=55', alt: 'Sesión en estudio' },
 ]
 
 const ARTISTS = [
