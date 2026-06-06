@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --ink: #DC2626;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #080808;
+  color: #f0f0f0;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+::selection {
+  background: #DC2626;
+  color: #fff;
+}
+
+@layer components {
+  .section-title {
+    @apply text-4xl sm:text-6xl font-black uppercase tracking-tighter leading-none;
+  }
+  .label-tag {
+    @apply text-xs uppercase tracking-[0.2em] text-[#DC2626] font-mono;
+  }
+  .btn-primary {
+    @apply inline-block bg-[#DC2626] text-white px-8 py-4 text-xs uppercase tracking-[0.2em] font-bold hover:bg-[#b91c1c] transition-colors;
+  }
+  .btn-outline {
+    @apply inline-block border border-[#333] text-[#f0f0f0] px-8 py-4 text-xs uppercase tracking-[0.2em] font-bold hover:border-[#DC2626] hover:text-[#DC2626] transition-colors;
+  }
+}
