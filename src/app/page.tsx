@@ -116,12 +116,18 @@ function Nav() {
 function Hero() {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* CSS background */}
-      <div className="absolute inset-0 bg-[#080808]" />
+      {/* Background photo - tattoo studio */}
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
+        src="https://images.pexels.com/photos/7005797/pexels-photo-7005797.jpeg?auto=compress&cs=tinysrgb&w=1920"
+        alt=""
+        className="absolute inset-0 w-full h-full object-cover opacity-20 grayscale"
+      />
+      {/* Gradient overlays */}
+      <div className="absolute inset-0 bg-gradient-to-b from-[#080808]/70 via-[#080808]/50 to-[#080808]/90" />
       <div className="absolute inset-0" style={{ background: 'radial-gradient(ellipse 80% 60% at 50% 40%, rgba(220,38,38,0.08) 0%, transparent 70%)' }} />
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#DC2626]/30 to-transparent" />
       <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#DC2626]/10 to-transparent" />
-
       <div className="relative z-10 max-w-6xl mx-auto px-6 text-center">
         <p className="label-tag mb-6 block">Estudio de tatuaje · Barcelona</p>
         <h1 className="text-6xl sm:text-8xl md:text-[10rem] font-black uppercase tracking-tighter leading-none mb-8">
@@ -478,6 +484,7 @@ function Footer() {
 export default function Home() {
   return (
     <main className="bg-[#080808] text-[#f0f0f0]">
+      <div className="watermark" />
       <Nav />
       <Hero />
       <Gallery />
